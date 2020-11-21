@@ -1,0 +1,59 @@
+
+<style>
+  .wrapper{
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    box-shadow: 0px 6px 15px #0004;
+    padding: 2rem;
+}
+</style>
+<div class="wrapper">
+
+<h2>Add & Update Qr Code in Angular 10 </h2>
+
+<div>QR Code: {{ qrCodeVal }}</div>
+<div>Level: {{ level }}</div>
+<div>Width: {{ width }}</div>
+
+<br />
+<br />
+
+<div>
+  <qr-code [value]="qrCodeVal" [size]="width" [level]="level"></qr-code>
+</div>
+
+<h4>Change QR Code Info</h4>
+<label>
+  Update name string: <input [(ngModel)]="qrCodeVal" placeholder="name" />
+</label>
+<br />
+<br />
+
+<button (click)="updateQrInfo('John Doe')">Update to "John Doe"</button>
+<button (click)="updateQrInfo('Ryan Duff')">Update to "Ryan Duff"</button>
+<button (click)="updateQrInfo('Jerry Maguire')"> update to "Jerry Maguire"</button>
+
+<br />
+<br />
+<strong>Update Width</strong>: 
+<button (click)="updateWidth(500)">500</button>
+<button (click)="updateWidth(400)">400</button>
+<button (click)="updateWidth(300)">300</button>
+<button (click)="updateWidth(200)">200</button>
+
+<br />
+<br />
+<strong>Update Level</strong>: 
+<button (click)="updateLevel('L')">L</button>
+<button (click)="updateLevel('M')">M</button>
+<button (click)="updateLevel('Q')">Q</button>
+<button (click)="updateLevel('H')">H</button>
+
+
+<router-outlet></router-outlet>
+
+</div>
