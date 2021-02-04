@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  public qrCodeVal: string = null;
+  public qrCodeVal: string = '';
   public level: "L" | "M" | "Q" | "H";
   public width: number;
 
